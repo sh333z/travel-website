@@ -148,3 +148,19 @@ button:hover {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.main-title {
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #1E88E5; /* blue */
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: "Inter", sans-serif;
+}
