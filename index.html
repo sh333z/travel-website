@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BlueTrail Travel — Travel Agency</title>
+  <meta name="description" content="seyahat Holidays - curated tour packages, visa assistance, and travel planning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="https://via.placeholder.com/40x40?text=BT" alt="Seyahath logo" class="logo">
+        <span class="brand-text">Seyahath Holidays</span>
+      </a>
+      <nav class="nav">
+        <a href="#packages">Packages</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn btn-outline">Contact</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#packages">Packages</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Dream trips, expertly planned</h1>
+          <p>Curated packages, local guides, and end-to-end support — so you can travel without worries.</p>
+          <a class="btn btn-primary" href="#packages">Explore Packages</a>
+        </div>
+        <div class="hero-search">
+          <form id="quickSearch" class="search-form" aria-label="Search packages">
+            <label for="where" class="sr-only">Destination</label>
+            <input id="where" name="destination" placeholder="Where to?" required>
+            <label for="when" class="sr-only">Date</label>
+            <input id="when" name="date" type="date">
+            <button class="btn">Search</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Packages -->
+    <section id="packages" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Packages</h2>
+          <p>Hand-picked itineraries for every type of traveler.</p>
+        </div>
+
+        <div class="card-grid" id="packagesGrid">
+          <!-- Package cards (can be generated from backend) -->
+          <article class="card">
+            <img src="https://source.unsplash.com/800x600/?beach" alt="Tropical beach">
+            <div class="card-body">
+              <h3>Maldives Relaxation — 7 days</h3>
+              <p class="muted">All-inclusive resort, transfers, and water activities.</p>
+              <div class="card-row">
+                <strong>₹89,999</strong>
+                <button class="btn btn-sm btn-primary" data-package="Maldives Relaxation">Request Quote</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://source.unsplash.com/800x600/?mountains" alt="Mountain landscape">
+            <div class="card-body">
+              <h3>Himalayan Escape — 8 days</h3>
+              <p class="muted">Guided trek, homestays, cultural visits.</p>
+              <div class="card-row">
+                <strong>₹39,500</strong>
+                <button class="btn btn-sm btn-primary" data-package="Himalayan Escape">Request Quote</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://source.unsplash.com/800x600/?city,night" alt="City at night">
+            <div class="card-body">
+              <h3>European Highlights — 12 days</h3>
+              <p class="muted">Multi-city tour: Paris, Rome, Barcelona.</p>
+              <div class="card-row">
+                <strong>₹1,79,000</strong>
+                <button class="btn btn-sm btn-primary" data-package="European Highlights">Request Quote</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Services</h2>
+          <p>Everything you need for a smooth trip.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service">
+            <h4>Custom Itineraries</h4>
+            <p>Create a trip based on your interests and pace.</p>
+          </div>
+          <div class="service">
+            <h4>Visa & Documentation</h4>
+            <p>Expert assistance with visa forms and submissions.</p>
+          </div>
+          <div class="service">
+            <h4>Hotel & Transfers</h4>
+            <p>Best rates negotiated for hotels and airport transfers.</p>
+          </div>
+          <div class="service">
+            <h4>Group Travel</h4>
+            <p>Corporate/offsite and group discount planning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section">
+      <div class="container why-us">
+        <div>
+          <h3>Why choose Seyahath Holidays?</h3>
+          <ul>
+            <li>Trusted local partners and guides</li>
+            <li>Transparent pricing — no hidden fees</li>
+            <li>24/7 support while you travel</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Get a Travel Expert</a>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "Organized the honeymoon trip of our dreams. Flawless from start to finish." — Priya & Arjun
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Booking -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contact & Booking</h2>
+          <p>Send us your details — we'll call back with a personalized quote.</p>
+
+          <form id="contactForm" class="contact-form" method="post" action="/api/contact">
+            <label for="name">Full name</label>
+            <input id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone">
+
+            <label for="packageSelect">Interested in</label>
+            <select id="packageSelect" name="package">
+              <option value="">Any package</option>
+              <option>Maldives Relaxation — 7 days</option>
+              <option>Himalayan Escape — 8 days</option>
+              <option>European Highlights — 12 days</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button class="btn btn-primary" type="submit">Request Quote</button>
+            <div id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <aside class="office">
+          <h3>Our Office</h3>
+          <p>Seyahat Holidays<br>Thana,Kannur,Kerala, India</p>
+          <p>Email: seyahatholidays@bluetrail.example<br>Phone: +91 9656550235, +91 8606550235</p>
+          <div class="small-map" aria-hidden="true">
+            <img src="https://via.placeholder.com/400x250?text=Map" alt="office map">
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> BlueTrail Travel. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>
