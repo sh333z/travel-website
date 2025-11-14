@@ -136,3 +136,15 @@ button {
 button:hover {
     background: dodgerblue;
 }
+/* Seyahath Title Style */
+.main-title {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    background: linear-gradient(to right, #007BFF, #00C853);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
