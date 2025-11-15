@@ -165,8 +165,9 @@ button:hover {
   font-family: "Inter", sans-serif;
 }
 body {
-    background-image: url("your-image.jpg");
+    background-image: url("backEnv.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
