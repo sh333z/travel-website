@@ -164,3 +164,9 @@ button:hover {
   margin-bottom: 20px;
   font-family: "Inter", sans-serif;
 }
+body {
+    background-image: url("your-image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
