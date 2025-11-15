@@ -166,10 +166,13 @@ button:hover {
 body {
     margin: 0;
     padding: 0;
-    background-image: url("backEnv.png");
-    background-size: contain;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("backEnv.png");
+
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #0A2A34;
 }
