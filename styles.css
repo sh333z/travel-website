@@ -176,3 +176,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.site-logo {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
