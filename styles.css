@@ -177,8 +177,8 @@ body {
     background-attachment: fixed;
 }
 .site-logo {
-    width: 300px;
+    width: 250px;
     height: auto;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
 }
