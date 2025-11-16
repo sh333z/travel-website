@@ -281,3 +281,7 @@ body {
     text-decoration: none;
     color: #333;
 }
+.site-logo {
+    width: 300px;
+    max-width: 90%;
+}
