@@ -65,30 +65,36 @@ document.querySelector(".menu-btn").onclick = () => {
         : "block";
 };
 // popup form
-function openForm(service){
+function openForm(service) {
   document.getElementById("popup-form").style.display = "flex";
+  const formBox = document.getElementById("form-box");
+  const title = document.getElementById("form-title");
 
-  // If user clicked "Apply Visa"
+  // If user clicked Visa Assistance → show visa options
   if (service === "Visa Service") {
-      document.getElementById("form-title").innerText = "Choose Visa Type";
-      document.getElementById("visa-box").style.display = "block";  // Show visa options
-      return;
+
+    title.innerText = "Select Visa Type";
+
+    formBox.innerHTML = `
+      <h2>Select Visa Type</h2>
+      <button onclick="openForm('Saudi Arabia Visa')">Saudi Arabia Visa</button>
+      <button onclick="openForm('Oman Visa')">Oman Visa</button>
+      <button onclick="openForm('UAE Visa')">UAE Visa</button>
+      <button onclick="openForm('Armenia Visa')">Armenia Visa</button>
+      <button onclick="openForm('Bahrain Visa')">Bahrain Visa</button>
+      <button onclick="closeForm()" style="background:red;margin-top:10px;">Close</button>
+    `;
+    return;
   }
 
-  // Normal services
-  document.getElementById("form-title").innerText = service;
-  document.getElementById("visa-box").style.display = "none";
-}
-
-function selectVisa(type){
-  document.getElementById("visaType").value = type;
-}
-
-function closeForm(){
-  document.getElementById("popup-form").style.display = "none";
-}
-
-function sendForm(){
-  alert("Thank you! Your request has been submitted.");
-  closeForm();
+  // All other services open normal form
+  formBox.innerHTML = `
+    <h2>${service}</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="text" placeholder="Phone Number">
+    <input type="text" placeholder="Email">
+    <input type="text" placeholder="Details / Requirements">
+    <button onclick="sendForm()">Submit</button>
+    <button onclick="closeForm()" style="background:red;margin-top:10px;">Close</button>
+  `;
 }
