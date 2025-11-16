@@ -182,11 +182,11 @@ body {
 }
 
 .menu-btn {
-    font-size: 26px;
-    background: #333;
-    color: white;
+    font-size: 28px;
+    paddind:10px 15px;
+    background: #FFF7E6;
+    color:#000;
     border: none;
-    padding: 10px 15px;
     border-radius: 6px;
     cursor: pointer;
 }
@@ -194,11 +194,11 @@ body {
 .dropdown-menu {
     position: absolute;
     right: 0;
-    top: 50px;
-    background: white;
+    top: 40px;
+    background: #FFF7E6;
     border-radius: 8px;
-    width: 160px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+    width: 140px;
+    box-shadow: 0px 4px 18px rgba(0,0,0,0.15);
     display: none;
     overflow: hidden;
 }
