@@ -174,34 +174,6 @@ body {
     display: block;
     margin: 0 auto 10px auto;
 }
-.top-right-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-}
-
-.menu-btn {
-    font-size: 28px;
-    paddind:10px 15px;
-    background: #FFF7E6;
-    color:#000;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    background: #FFF7E6;
-    border-radius: 8px;
-    width: 140px;
-    box-shadow: 0px 4px 18px rgba(0,0,0,0.15);
-    display: none;
-    overflow: hidden;
-}
 
 .dropdown-menu a {
     display: block;
@@ -256,4 +228,56 @@ body {
 
 .visa-btn:hover {
   background: #ddd;
+}
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #FFF9E6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-logo {
+    width: 45px;
+    height: auto;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+}
+
+.menu-btn {
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    background: #FFF9E6;
+    border-radius: 10px;
+    width: 150px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
 }
