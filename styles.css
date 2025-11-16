@@ -291,3 +291,26 @@ body {
     border-radius: 10px;
     margin-bottom:10px;
 }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-box {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  height: 350px;   /* <-- THIS MAKES ALL BOXES SAME SIZE */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-image {
+  width: 80px;
+  margin: 0 auto;
+}
