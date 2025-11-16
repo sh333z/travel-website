@@ -11,209 +11,252 @@
 </head>
 <body>
 
-  <h1 class="main-title">
-    <img src="onlylogo.png" alt="Seyahat Tours & Travels" class="site-logo">
-  </h1>
-  <p class="subtitle">Enjoy your HOLIDAY with SEYAHAT.</p>
+<!-- TOP RIGHT MENU -->
+<div class="top-right-menu">
+  <button class="menu-btn">☰</button>
+  <div class="dropdown-menu" id="dropdownMenu">
+    <a href="#packages">Packages</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- YOUR ORIGINAL CONTENT STARTS -->
+
+<h1 class="main-title">
+  <img src="onlylogo.png" alt="Seyahat Tours & Travels" class="site-logo">
+</h1>
+<p class="subtitle">Enjoy your HOLIDAY with SEYAHAT.</p>
 
 <div class="services">
 
-    <div class="service-box">
-        <h3>🏖 Holidays</h3>
-        <p>Customized holiday packages for families, couples, groups & solo travelers.</p>
-        <button onclick="openForm('Holiday Booking')">View</button>
-    </div>
+  <div class="service-box">
+      <h3>🏖 Holidays</h3>
+      <p>Customized holiday packages for families, couples, groups & solo travelers.</p>
+      <button onclick="openForm('Holiday Booking')">View</button>
+  </div>
 
-    <div class="service-box">
-        <h3>🌏 Visa Assistance</h3>
-        <p>Fast & easy visa processing for 100+ countries.</p>
-        <button onclick="openForm('Visa Service')">Apply Now</button>
-    </div>
+  <div class="service-box">
+      <h3>🌏 Visa Assistance</h3>
+      <p>Fast & easy visa processing for 100+ countries.</p>
+      <button onclick="openForm('Visa Service')">Apply Now</button>
+  </div>
 
-    <div class="service-box">
-        <h3>✈️ Air Ticketing</h3>
-        <p>Affordable domestic & international flight tickets.</p>
-        <button onclick="openForm('Flight Ticket Booking')">View</button>
-    </div>
+  <div class="service-box">
+      <h3>✈️ Air Ticketing</h3>
+      <p>Affordable domestic & international flight tickets.</p>
+      <button onclick="openForm('Flight Ticket Booking')">View</button>
+  </div>
 
-    <div class="service-box">
-        <h3>🕋 Umrah Packages</h3>
-        <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
-        <button onclick="openForm('Umrah Package')">View</button>
-    </div>
+  <div class="service-box">
+      <h3>🕋 Umrah Packages</h3>
+      <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
+      <button onclick="openForm('Umrah Package')">View</button>
+  </div>
 
-    <div class="service-box">
-        <h3>🏨 Hotel Booking</h3>
-        <p>Budget & luxury hotel bookings in all major cities.</p>
-        <button onclick="openForm('Hotel Booking')">View</button>
-    </div>
+  <div class="service-box">
+      <h3>🏨 Hotel Booking</h3>
+      <p>Budget & luxury hotel bookings in all major cities.</p>
+      <button onclick="openForm('Hotel Booking')">View</button>
+  </div>
 
-    <div class="service-box">
-        <h3>🛂 Passport Services</h3>
-        <p>New passport, renewal, corrections & tatkal services.</p>
-        <button onclick="openForm('Passport Service')">Apply Now</button>
-    </div>
+  <div class="service-box">
+      <h3>🛂 Passport Services</h3>
+      <p>New passport, renewal, corrections & tatkal services.</p>
+      <button onclick="openForm('Passport Service')">Apply Now</button>
+  </div>
 
 </div>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#">
-        <img src="https://via.placeholder.com/40x40?text=BT" alt="Seyahath logo" class="logo">
-        <span class="brand-text">Seyahath Holidays</span>
-      </a>
-      <nav class="nav">
-        <a href="#packages">Packages</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn btn-outline">Contact</a>
-      </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-    </div>
-    <div class="mobile-nav" id="mobileNav" hidden>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">
+      <img src="https://via.placeholder.com/40x40?text=BT" alt="Seyahath logo" class="logo">
+      <span class="brand-text">Seyahath Holidays</span>
+    </a>
+    <nav class="nav">
       <a href="#packages">Packages</a>
       <a href="#services">Services</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-outline">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#packages">Packages</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Dream trips, expertly planned</h1>
+        <p>Curated packages, local guides, and end-to-end support — so you can travel without worries.</p>
+        <a class="btn btn-primary" href="#packages">Explore Packages</a>
+      </div>
+      <div class="hero-search">
+        <form id="quickSearch" class="search-form" aria-label="Search packages">
+          <label for="where" class="sr-only">Destination</label>
+          <input id="where" name="destination" placeholder="Where to?" required>
+          <label for="when" class="sr-only">Date</label>
+          <input id="when" name="date" type="date">
+          <button class="btn">Search</button>
+        </form>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Dream trips, expertly planned</h1>
-          <p>Curated packages, local guides, and end-to-end support — so you can travel without worries.</p>
-          <a class="btn btn-primary" href="#packages">Explore Packages</a>
-        </div>
-        <div class="hero-search">
-          <form id="quickSearch" class="search-form" aria-label="Search packages">
-            <label for="where" class="sr-only">Destination</label>
-            <input id="where" name="destination" placeholder="Where to?" required>
-            <label for="when" class="sr-only">Date</label>
-            <input id="when" name="date" type="date">
-            <button class="btn">Search</button>
-          </form>
-        </div>
+  <!-- SERVICES -->
+  <section id="services" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Services</h2>
+        <p>Everything you need for a smooth trip.</p>
       </div>
-    </section>
 
-
-    <!-- Services -->
-    <section id="services" class="section alt">
-      <div class="container">
-        <div class="section-head">
-          <h2>Our Services</h2>
-          <p>Everything you need for a smooth trip.</p>
-        </div>
-        <div class="services-grid">
-          <div class="service">
-            <h4>Custom Itineraries</h4>
-            <p>Create a trip based on your interests and pace.</p>
-          </div>
-          <div class="service">
-            <h4>Visa & Documentation</h4>
-            <p>Expert assistance with visa forms and submissions.</p>
-          </div>
-          <div class="service">
-            <h4>Hotel & Transfers</h4>
-            <p>Best rates negotiated for hotels and airport transfers.</p>
-          </div>
-          <div class="service">
-            <h4>Group Travel</h4>
-            <p>Corporate/offsite and group discount planning.</p>
-          </div>
-        </div>
+      <div class="services-grid">
+        <div class="service"><h4>Custom Itineraries</h4><p>Create a trip based on your interests and pace.</p></div>
+        <div class="service"><h4>Visa & Documentation</h4><p>Expert assistance with visa forms and submissions.</p></div>
+        <div class="service"><h4>Hotel & Transfers</h4><p>Best rates negotiated for hotels and airport transfers.</p></div>
+        <div class="service"><h4>Group Travel</h4><p>Corporate/offsite and group discount planning.</p></div>
       </div>
-    </section>
-
-    <!-- Why choose us -->
-    <section class="section">
-      <div class="container why-us">
-        <div>
-          <h3>Why choose Seyahath Holidays?</h3>
-          <ul>
-            <li>Trusted local partners and guides</li>
-            <li>Transparent pricing — no hidden fees</li>
-            <li>24/7 support while you travel</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline">Get a Travel Expert</a>
-        </div>
-        <div class="testimonial">
-          <blockquote>
-            "Organized the honeymoon trip of our dreams. Flawless from start to finish." — Priya & Arjun
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Booking -->
-    <section id="contact" class="section alt">
-      <div class="container contact-grid">
-        <div>
-          <h2>Contact & Booking</h2>
-          <p>Send us your details — we'll call back with a personalized quote.</p>
-
-          <form id="contactForm" class="contact-form" method="post" action="/api/contact">
-            <label for="name">Full name</label>
-            <input id="name" name="name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone</label>
-            <input id="phone" name="phone">
-
-            <label for="packageSelect">Interested in</label>
-            <select id="packageSelect" name="package">
-              <option value="">Any package</option>
-              <option>Maldives Relaxation — 7 days</option>
-              <option>Himalayan Escape — 8 days</option>
-              <option>European Highlights — 12 days</option>
-            </select>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-
-            <button class="btn btn-primary" type="submit">Request Quote</button>
-            <div id="formStatus" role="status" aria-live="polite"></div>
-          </form>
-        </div>
-
-        <aside class="office">
-          <h3>Our Office</h3>
-          <p>Seyahat Tours & Travels<br>Royal Oak Mall,Thana,Kannur </p>
-          <p>Email: seyahat@gmail.com<br>Call/Whatsapp +91 9656550235, +91 8606550235</p>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Seyahath Holidays . All rights reserved.</p>
-      <nav class="footer-nav">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </nav>
     </div>
-  </footer>
+  </section>
 
-  <script src="scripts.js" defer></script>
-  <div id="popup-form" style="display:none;">
-    <div id="form-box">
-        <h2 id="form-title"></h2>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Phone Number">
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="Details / Requirements">
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <div class="container why-us">
+      <div>
+        <h3>Why choose Seyahath Holidays?</h3>
+        <ul>
+          <li>Trusted local partners and guides</li>
+          <li>Transparent pricing — no hidden fees</li>
+          <li>24/7 support while you travel</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">Get a Travel Expert</a>
+      </div>
 
-        <button onclick="sendForm()">Submit</button>
-        <button onclick="closeForm()" style="background:red; margin-top:10px;">Close</button>
+      <div class="testimonial">
+        <blockquote>
+          "Organized the honeymoon trip of our dreams. Flawless from start to finish." — Priya & Arjun
+        </blockquote>
+      </div>
     </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contact & Booking</h2>
+        <p>Send us your details — we'll call back with a personalized quote.</p>
+
+        <form id="contactForm" class="contact-form">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone">
+
+          <label for="packageSelect">Interested in</label>
+          <select id="packageSelect" name="package">
+            <option value="">Any package</option>
+            <option>Maldives Relaxation — 7 days</option>
+            <option>Himalayan Escape — 8 days</option>
+            <option>European Highlights — 12 days</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button class="btn btn-primary" type="submit">Request Quote</button>
+          <div id="formStatus"></div>
+        </form>
+      </div>
+
+      <aside class="office">
+        <h3>Our Office</h3>
+        <p>Seyahat Tours & Travels<br>Royal Oak Mall,Thana,Kannur</p>
+        <p>Email: seyahat@gmail.com<br>Call/Whatsapp +91 9656550235, +91 8606550235</p>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Seyahath Holidays . All rights reserved.</p>
+    <nav class="footer-nav">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- POPUP FORM -->
+<div id="popup-form" style="display:none;">
+  <div id="form-box">
+    <h2 id="form-title"></h2>
+    <input type="text" placeholder="Your Name">
+    <input type="text" placeholder="Phone Number">
+    <input type="text" placeholder="Email">
+    <input type="text" placeholder="Details / Requirements">
+    <button onclick="sendForm()">Submit</button>
+    <button onclick="closeForm()" style="background:red; margin-top:10px;">Close</button>
+  </div>
 </div>
 
+<!-- INLINE CSS (for popup + dropdown) -->
 <style>
+.top-right-menu {
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:999999;
+}
+.menu-btn {
+    font-size:28px;
+    padding:10px 15px;
+    background:#333;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+.dropdown-menu {
+    position:absolute;
+    top:50px;
+    right:0;
+    background:#fff;
+    width:160px;
+    display:none;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.dropdown-menu a {
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:#333;
+}
+.dropdown-menu a:hover {
+    background:#f0f0f0;
+}
 #popup-form {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -222,7 +265,6 @@
     justify-content: center;
     align-items: center;
 }
-
 #form-box {
     width: 300px;
     background: #fff;
@@ -236,29 +278,25 @@
 }
 </style>
 
+<!-- FINAL JAVASCRIPT -->
 <script>
 function openForm(service) {
     document.getElementById("popup-form").style.display = "flex";
     document.getElementById("form-title").innerText = service;
 }
-
 function closeForm() {
     document.getElementById("popup-form").style.display = "none";
 }
-
 function sendForm() {
     alert("Thank you! Your request has been submitted.");
     closeForm();
-  <div class="top-right-menu">
-  <button class="menu-btn">☰</button>
-  <div class="dropdown-menu">
-    <a href="#packages">Packages</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
 }
+// Dropdown toggle
+document.querySelector(".menu-btn").addEventListener("click", () => {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+});
 </script>
+
 </body>
 </html>
