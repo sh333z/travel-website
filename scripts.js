@@ -64,3 +64,31 @@ document.querySelector(".menu-btn").onclick = () => {
         ? "none"
         : "block";
 };
+// popup form
+function openForm(service){
+  document.getElementById("popup-form").style.display = "flex";
+
+  // If user clicked "Apply Visa"
+  if (service === "Visa Service") {
+      document.getElementById("form-title").innerText = "Choose Visa Type";
+      document.getElementById("visa-box").style.display = "block";  // Show visa options
+      return;
+  }
+
+  // Normal services
+  document.getElementById("form-title").innerText = service;
+  document.getElementById("visa-box").style.display = "none";
+}
+
+function selectVisa(type){
+  document.getElementById("visaType").value = type;
+}
+
+function closeForm(){
+  document.getElementById("popup-form").style.display = "none";
+}
+
+function sendForm(){
+  alert("Thank you! Your request has been submitted.");
+  closeForm();
+}
