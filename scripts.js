@@ -59,10 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 document.querySelector(".menu-btn").onclick = () => {
-    document.querySelector(".dropdown-menu").style.display =
-      document.querySelector(".dropdown-menu").style.display === "block"
-        ? "none"
-        : "block";
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+};
 };
 // popup form
 function openForm(service) {
