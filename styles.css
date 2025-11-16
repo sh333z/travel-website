@@ -4,8 +4,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF9E6;
 }
-:root{
+
+:root {
   --bg: #FFF9E6;
   --card: #ffffff;
   --primary: #0D6EFD;
@@ -18,123 +22,61 @@ body {
   font-synthesis: none;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 
-/* container */
-.container{max-width:var(--container);margin:0 auto;padding:1rem}
+/* CONTAINER */
+.container { max-width: var(--container); margin: 0 auto; padding: 1rem; }
 
-/* header */
-.site-header{background:linear-gradient(90deg, rgba(255,255,255,0.95), rgba(255,255,255,0.95));border-bottom:1px solid rgba(31,41,55,0.05);position:sticky;top:0;z-index:30}
-.header-inner{display:flex;align-items:center;gap:1rem;padding:0.75rem 0}
-.brand{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--text)}
-.logo{width:40px;height:40px;border-radius:8px;object-fit:cover}
-.brand-text{font-weight:700;font-family:"Poppins",sans-serif}
-.nav{margin-left:auto;display:flex;gap:1rem;align-items:center}
-.nav a{text-decoration:none;color:var(--text);padding:.45rem .6rem;border-radius:6px}
-.btn{border:0;padding:.55rem .8rem;border-radius:8px;cursor:pointer;background:transparent}
-.btn-primary{background:var(--primary);color:white;font-weight:600}
-.btn-outline{border:1px solid rgba(31,41,55,0.08);padding:.5rem .7rem;border-radius:8px}
-
-/* mobile nav */
-.menu-toggle{display:none;background:none;border:0;font-size:1.2rem;margin-left:1rem}
-.mobile-nav{display:flex;flex-direction:column;padding:0.5rem 1rem;border-top:1px solid rgba(31,41,55,0.04)}
-.mobile-nav a{padding:.5rem 0;text-decoration:none;color:var(--text)}
-
-/* hero */
-.hero{padding:2.5rem 0;background-image:linear-gradient(0deg, rgba(13,110,253,0.04), rgba(13,110,253,0.02));}
-.hero-inner{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:center}
-.hero h1{font-family:"Poppins",sans-serif;font-size:2rem;margin:0 0 .5rem}
-.hero p{color:var(--muted);margin:0 0 1rem}
-
-/* forms */
-.search-form{display:flex;gap:.5rem}
-.search-form input{padding:.6rem .7rem;border-radius:8px;border:1px solid rgba(31,41,55,0.08);min-width:0}
-.search-form button{padding:.6rem .8rem;border-radius:8px;border:0;background:var(--primary);color:#fff}
-
-/* sections */
-.section{padding:2rem 0}
-.section.alt{background:linear-gradient(180deg, transparent, rgba(0,0,0,0.02))}
-.section-head h2{margin:0;font-family:"Poppins",sans-serif}
-.section-head p{color:var(--muted);margin:.25rem 0 1.2rem}
-
-/* grid cards */
-.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 18px rgba(15,23,42,0.06);display:flex;flex-direction:column}
-.card img{width:100%;height:180px;object-fit:cover}
-.card-body{padding:1rem;display:flex;flex-direction:column;gap:.5rem}
-.card-row{display:flex;justify-content:space-between;align-items:center;margin-top:0.5rem}
-
-/* services */
-.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.service{background:var(--card);padding:1rem;border-radius:8px;text-align:left;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
-
-/* contact */
-.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem}
-.contact-form{display:flex;flex-direction:column;gap:.6rem}
-.contact-form input,.contact-form textarea,.contact-form select{padding:.6rem;border-radius:8px;border:1px solid rgba(31,41,55,0.06)}
-
-/* footer */
-.site-footer{border-top:1px solid rgba(31,41,55,0.04);padding:1.2rem 0;margin-top:1.5rem}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
-
-/* utilities */
-.muted{color:var(--muted)}
-.small-map img{width:100%;border-radius:8px}
-
-/* responsive */
-@media (max-width:1000px){
-  .card-grid{grid-template-columns:repeat(2,1fr)}
-  .services-grid{grid-template-columns:repeat(2,1fr)}
-  .hero-inner{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-}
-@media (max-width:640px){
-  .nav{display:none}
-  .menu-toggle{display:block}
-  .card-grid{grid-template-columns:1fr}
-  .services-grid{grid-template-columns:1fr}
-  .site-header{padding:0 0.5rem}
-  .container{padding:0.5rem}
-  .hero h1{font-size:1.5rem}
-}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-.services {
+/* HEADER */
+.main-header {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 1000px;
-    margin: auto;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #FFF9E6;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.service-box {
-    width: 280px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.logo-container { display: flex; align-items: center; gap: 10px; }
+
+.header-logo {
+    width: auto;
+    height: 100px;
 }
 
-.service-box h3 {
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background: royalblue;
-    color: white;
+.menu-btn {
+    font-size: 26px;
+    background: none;
     border: none;
-    border-radius: 8px;
     cursor: pointer;
 }
 
-button:hover {
-    background: dodgerblue;
+.dropdown-menu {
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    background: #FFF9E6;
+    border-radius: 10px;
+    width: 150px;
+    display: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-/* Seyahath Title Style */
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+}
+
+/* TITLE */
 .main-title {
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -146,14 +88,6 @@ button:hover {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.main-title {
-  font-size: 2.5rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  color: #1E88E5; /* blue */
-  text-align: center;
-  margin-bottom: 5px;
-}
 
 .subtitle {
   text-align: center;
@@ -162,36 +96,54 @@ button:hover {
   margin-bottom: 20px;
   font-family: "Inter", sans-serif;
 }
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #FFF9E6;
-}
+
 .site-logo {
     width: 300px;
-    height: auto;
+    max-width: 90%;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px;
 }
 
-.dropdown-menu a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
+/* SERVICES */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.dropdown-menu a:hover {
-    background: #f0f0f0;
+.service-box {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.service-image {
+
+.service-box img {
     width: 100%;
-    height: 120px;
+    height: 170px; /* same as visa cards */
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 8px;
 }
+
+button {
+    padding: 10px 20px;
+    background: royalblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover { background: dodgerblue; }
+
+/* POPUP FORM */
 #popup-form {
   position: fixed;
   top: 0; left: 0;
@@ -224,112 +176,14 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.visa-btn:hover { background: #ddd; }
 
-.visa-btn:hover {
-  background: #ddd;
-}
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: #FFF9E6;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* RESPONSIVE */
+@media (max-width:1000px){
+  .services { grid-template-columns: repeat(2, 1fr); }
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-logo {
-    width: auto;
-    height: 100px;
-}
-
-.brand-name {
-    font-size: 20px;
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
-}
-
-.menu-btn {
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.dropdown-menu {
-    position: absolute;
-    right: 20px;
-    top: 70px;
-    background: #FFF9E6;
-    border-radius: 10px;
-    width: 150px;
-    display: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.dropdown-menu a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #333;
-}
-.site-logo {
-    width: 300px;
-    max-width: 90%;
-}
-.service-img {
-    width: 100%;
-    height: 180px;        
-    object-fit: cover;   
-    border-radius: 10px;
-    margin-bottom:10px;
-}
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-
-.service-box {
-  background: white;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  height: 350px;   /* <-- THIS MAKES ALL BOXES SAME SIZE */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.service-image {
-  width: 80px;
-  margin: 0 auto;
-}
-/* Make home service boxes same as visa cards */
-.service-box {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    height: 330px;  /* MATCH VISA BOX SIZE */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.service-box img {
-    width: 100%;
-    height: 170px;    /* SAME AS VISA IMAGE HEIGHT */
-    object-fit: cover;
-    border-radius: 8px;
+@media (max-width:640px){
+  .services { grid-template-columns: 1fr; }
+  .main-header { padding: 10px; }
 }
