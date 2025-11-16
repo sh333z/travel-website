@@ -68,12 +68,9 @@ document.querySelector(".menu-btn").onclick = () => {
 function openForm(service) {
   document.getElementById("popup-form").style.display = "flex";
   const formBox = document.getElementById("form-box");
-  const title = document.getElementById("form-title");
 
-  // If user clicked Visa Assistance → show visa options
+  // SHOW VISA OPTIONS ONLY WHEN USER CLICKS "Visa Assistance"
   if (service === "Visa Service") {
-
-    title.innerText = "Select Visa Type";
 
     formBox.innerHTML = `
       <h2>Select Visa Type</h2>
@@ -87,7 +84,22 @@ function openForm(service) {
     return;
   }
 
-  // All other services open normal form
+  // ALL VISA TYPES → SHOW SMALL FORM
+  if (service.includes("Visa")) {
+
+    formBox.innerHTML = `
+      <h2>${service}</h2>
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Phone Number">
+      <input type="text" placeholder="Email">
+      <input type="text" value="${service}" readonly>
+      <button onclick="sendForm()">Submit</button>
+      <button onclick="closeForm()" style="background:red;margin-top:10px;">Close</button>
+    `;
+    return;
+  }
+
+  // ALL OTHER SERVICES → NORMAL FORM
   formBox.innerHTML = `
     <h2>${service}</h2>
     <input type="text" placeholder="Your Name">
