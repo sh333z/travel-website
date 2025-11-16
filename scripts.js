@@ -58,3 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+document.querySelector(".menu-btn").onclick = () => {
+    document.querySelector(".dropdown-menu").style.display =
+      document.querySelector(".dropdown-menu").style.display === "block"
+        ? "none"
+        : "block";
+};
