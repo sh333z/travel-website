@@ -183,3 +183,14 @@ button:hover { background: dodgerblue; }
   .services { grid-template-columns: 1fr; }
   .main-header { padding: 10px; }
 }
+.green-section {
+    background: #0f9d58; /* nice green */
+    padding: 30px 20px;
+}
+
+.green-section h2,
+.green-section label,
+.green-section p,
+.green-section h3 {
+    color: black; /* restore your original text color */
+}
