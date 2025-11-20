@@ -1,12 +1,8 @@
 body {
-    background-image: url("bgg.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+    /* background-image: url("bgg.png"); */ 
+    background-color: white !important;
     margin: 0;
     padding: 0;
-    background-color: #FFF9E6;
 }
 
 :root {
