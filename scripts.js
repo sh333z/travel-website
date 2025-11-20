@@ -136,6 +136,7 @@ function openAirImages() {
       </style>
     </head>
     <body>
+      <button onclick="window.close()">Back</button>
       <img src="air2.png">
       <img src="air1.png">
     </body>
