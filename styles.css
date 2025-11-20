@@ -25,7 +25,7 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .dropdown-menu.open{display:block}
 
 /* Title */
-.main-title{text-align:center;margin:18px 0 6px}
+.main-title{text-align:center;margin:10px 0 4px}
 .site-logo{width:280px;max-width:85%}
 .subtitle{text-align:center;color:var(--muted);margin-bottom:18px}
 
@@ -112,4 +112,11 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 #contact .contact-grid,
 .site-footer .footer-inner {
   background: transparent;
+}
+.main-title {
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #ffffff;
 }
