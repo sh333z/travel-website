@@ -3,141 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Seyahath Holidays — Travel Agency</title>
-
+  <title>Seyahath Holidays— Travel Agency</title>
+  <meta name="description" content="seyahat Holidays - curated tour packages, visa assistance, and travel planning." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-<!-- HEADER -->
 <header class="main-header">
-  <div class="logo-container">
-      <img src="onlylogo.png" class="header-logo" alt="Seyahath logo">
-      <span class="brand-text">Seyahath Holidays</span>
-  </div>
+    <div class="logo-container">
+        <img src="onlylogo.png" class="header-logo" alt="Logo">
+    </div>
 
-  <button class="menu-btn" aria-expanded="false" aria-controls="dropdownMenu">☰</button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 </header>
 
-<!-- MOBILE MENU -->
-<nav id="dropdownMenu" class="dropdown-menu" hidden>
+<!-- Dropdown -->
+<div class="dropdown-menu" id="dropdownMenu">
     <a href="#packages">Packages</a>
     <a href="#services">Services</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-</nav>
-
-<!-- HERO / TITLE -->
-<main>
-  <h1 class="main-title">
-    <img src="onlylogo.png" alt="Seyahat Tours & Travels" class="site-logo">
-  </h1>
-  <p class="subtitle">Services We Provide</p>
-
-  <!-- SERVICES GRID -->
-  <section class="services" id="packages">
-    <article class="service-box">
-        <img src="hldy.png" class="service-image" alt="Holidays">
-        <h3>Holidays</h3>
-        <p>Customized holiday packages for families, couples, groups & solo travelers.</p>
-        <button class="btn" onclick="openForm('Holiday Booking')">View</button>
-    </article>
-
-    <article class="service-box">
-        <img src="visaa.png" class="service-image" alt="Visa Assistance">
-        <h3>Visa Assistance</h3>
-        <p>Fast & easy visa processing</p>
-        <a href="visa.html" class="btn btn-link">View</a>
-    </article>
-
-    <article class="service-box">
-        <img src="air.png" class="service-image" alt="Air Ticketing">
-        <h3>Air Ticketing</h3>
-        <p>Affordable domestic & international flight tickets.</p>
-        <button class="btn" onclick="openAirSheet(this)">View Now</button>
-    </article>
-
-    <article class="service-box">
-        <img src="umrah.png" class="service-image" alt="Umrah Package">
-        <h3>Umrah Packages</h3>
-        <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
-        <button class="btn" onclick="openForm('Umrah Package')">View</button>
-    </article>
-
-    <article class="service-box">
-        <img src="hotel.png" class="service-image" alt="Hotel Booking">
-        <h3>Hotel Booking</h3>
-        <p>Budget & luxury hotel bookings in all major cities.</p>
-        <button class="btn" onclick="openForm('Hotel Booking')">View</button>
-    </article>
-
-    <article class="service-box">
-        <img src="pas.png" class="service-image" alt="Passport Services">
-        <h3>Passport Services</h3>
-        <p>New passport, renewal, corrections & tatkal services.</p>
-        <button class="btn" onclick="openPassportImage()">View Now</button>
-    </article>
-  </section>
-
-  <!-- AIR SHEET (Slide-up panel) -->
-  <aside id="airSheet" class="air-sheet" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="airSheetTitle">
-    <div class="air-sheet-panel" tabindex="-1">
-      <button class="air-sheet-close" aria-label="Close air details" onclick="closeAirSheet()">×</button>
-      <h2 id="airSheetTitle">Air Ticketing Details</h2>
-      <div class="air-sheet-body">
-        <img src="air2.png" class="air-img" alt="Air image 2">
-        <img src="air1.png" class="air-img" alt="Air image 1">
-        <p class="muted">For booking assistance contact us via WhatsApp or request a quote.</p>
-      </div>
-    </div>
-  </aside>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-    <div class="green-section">
-      <div class="contact-left">
-        <h2>Contact & Booking</h2>
-
-        <form id="contactForm" class="contact-form" action="#" method="post">
-          <label for="name">Full name</label>
-          <input id="name" name="name" required>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-
-          <label for="phone">Phone</label>
-          <input id="phone" name="phone">
-
-          <label for="service">Service you need</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-
-          <button class="btn btn-primary" type="submit">Request Quote</button>
-          <div id="formStatus" aria-live="polite" style="margin-top:10px;font-weight:600;"></div>
-        </form>
-      </div>
-
-      <aside class="office">
-        <h3>Our Office</h3>
-        <p>Seyahat Tours & Travels<br>Royal Oak Mall, Thana, Kannur</p>
-        <p>Email: seyahat@gmail.com<br>Call/WhatsApp: +91 9656550235</p>
-      </aside>
-    </div>
-
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Seyahath Holidays. All rights reserved.</p>
-    </footer>
-  </section>
-</main>
-
-<!-- POPUP FORM (generic small modal) -->
-<div id="popup-form" class="popup" aria-hidden="true">
-  <div id="form-box" class="popup-box" role="dialog" aria-modal="true"></div>
 </div>
 
-<script src="scripts.js"></script>
+<!-- LOGO TITLE -->
+<h1 class="main-title">
+  <img src="onlylogo.png" alt="Seyahat Tours & Travels" class="site-logo">
+</h1>
+<p class="subtitle">Service We Provide</p>
+
+<!-- YOUR SERVICES -->
+<div class="services">
+
+  <div class="service-box">
+      <img src="hldy.png" class="service-image" alt="Holidays">
+      <h3>Holidays</h3>
+      <p>Customized holiday packages for families, couples, groups & solo travelers.</p>
+      <button onclick="openForm('Holiday Booking')">View</button>
+  </div>
+
+  <div class="service-box">
+      <img src="visaa.png" class="service-image" alt="Visa Assistance">
+      <h3>Visa Assistance</h3>
+      <p>Fast & easy visa processing</p>
+      <a href="visa.html">View</a>
+  </div>
+
+  <div class="service-box">
+      <img src="air.png" class="service-image" alt="Air Ticketing">
+      <h3>Air Ticketing</h3>
+      <p>Affordable domestic & international flight tickets.</p>
+      <button onclick="openAirImage()">View Now</button>
+  </div>
+
+  <div class="service-box">
+      <img src="umrah.png" class="service-image" alt="Umrah Package">
+      <h3>Umrah Packages</h3>
+      <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
+      <button onclick="openForm('Umrah Package')">View</button>
+  </div>
+
+  <div class="service-box">
+      <img src="hotel.png" class="service-image" alt="Hotel Booking">
+      <h3>Hotel Booking</h3>
+      <p>Budget & luxury hotel bookings in all major cities.</p>
+      <button onclick="openForm('Hotel Booking')">View</button>
+  </div>
+
+  <div class="service-box">
+      <img src="pas.png" class="service-image" alt="Passport Services">
+      <h3>Passport Services</h3>
+      <p>New passport, renewal, corrections & tatkal services.</p>
+      <button onclick="openPassportImage()">View Now</button>
+  </div>
+
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#">
+      <img src="https://via.placeholder.com/40x40?text=BT" alt="Seyahath logo" class="logo">
+      <span class="brand-text">Seyahath Holidays</span>
+    </a>
+
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </div>
+
+</header>
+
+
+<!-- SERVICES GRID -->
+<section id="services" class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Our Services</h2>
+      <p>Everything you need for a smooth trip.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service"><h4>Custom Itineraries</h4><p>Create a trip based on your interests and pace.</p></div>
+      <div class="service"><h4>Visa & Documentation</h4><p>Expert assistance with visa forms and submissions.</p></div>
+      <div class="service"><h4>Hotel & Transfers</h4><p>Best rates for hotels and airport transfers.</p></div>
+      <div class="service"><h4>Group Travel</h4><p>Corporate/offsite and group discount planning.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section alt">
+  <div class="container contact-grid">
+
+    <div>
+      <h2>Contact & Booking</h2>
+
+    <form id="contactForm" class="contact-form">
+  <label>Full name</label>
+  <input id="name" required>
+
+  <label>Email</label>
+  <input id="email" type="email" required>
+
+  <label>Phone</label>
+  <input id="phone">
+
+  <label>Service you need</label>
+  <textarea id="message" rows="4" required></textarea>
+
+  <button class="btn btn-primary">Request Quote</button>
+  <div id="formStatus"></div>
+</form>
+    </div>
+
+    <aside class="office">
+      <h3>Our Office</h3>
+      <p>Seyahat Tours & Travels<br>Royal Oak Mall, Thana, Kannur</p>
+      <p>Email: seyahat@gmail.com<br>Call/WhatsApp: +91 9656550235</p>
+    </aside>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year"></span> Seyahath Holidays. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- POPUP FORM -->
+<div id="popup-form" style="display:none;">
+  <div id="form-box">
+
+    <h2 id="form-title">Visa Services</h2>
+
+    <p>Select the visa you need:</p>
+
+    <div class="visa-list">
+      <button class="visa-btn" onclick="selectVisa('Saudi Arabia Visa')">Saudi Arabia Visa</button>
+      <button class="visa-btn" onclick="selectVisa('Oman Visa')">Oman Visa</button>
+      <button class="visa-btn" onclick="selectVisa('UAE Visa')">UAE Visa</button>
+      <button class="visa-btn" onclick="selectVisa('Armenia Visa')">Armenia Visa</button>
+      <button class="visa-btn" onclick="selectVisa('Bahrain Visa')">Bahrain Visa</button>
+    </div>
+
+    <hr>
+
+    <h3>Enter Your Details</h3>
+    <input type="text" id="visaName" placeholder="Your Name">
+    <input type="text" id="visaPhone" placeholder="Phone Number">
+    <input type="text" id="visaEmail" placeholder="Email">
+    <input type="text" id="visaType" placeholder="Selected Visa" readonly>
+
+    <button onclick="sendForm()">Submit</button>
+    <button onclick="closeForm()" style="background:red;margin-top:10px;">Close</button>
+
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu
+  const toggle = document.getElementById('menuToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  toggle?.addEventListener('click', () => {
+    mobileNav.hidden = !mobileNav.hidden;
+  });
+});
+
+// popup form
+function openForm(service){
+  document.getElementById("popup-form").style.display="flex";
+  document.getElementById("form-title").innerText=service;
+}
+function closeForm(){document.getElementById("popup-form").style.display="none";}
+function sendForm(){alert("Thank you! Your request has been submitted.");closeForm();}
+
+// dropdown menu
+document.querySelector(".menu-btn").addEventListener("click", () => {
+  const m = document.getElementById("dropdownMenu");
+  m.style.display = (m.style.display === "block") ? "none" : "block";
+});
+</script>
+  <script>
+    function openPassportImage() {
+  window.open("pass-srvc.png", "_blank");
+}
+  </script>
+
+  <script>
+function openAirImages() {
+  const newTab = window.open("", "_blank");
+
+  newTab.document.write(`
+    <html>
+    <head>
+      <title>Air Ticketing Details</title>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          background: white;
+        }
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <img src="air1.png">
+      <img src="air2.png">
+    </body>
+    </html>
+  `);
+
+  newTab.document.close();
+}
+</script>   
+</script>
+
 </body>
-</html>
+</html> 
+This is my old code do it like this
