@@ -108,3 +108,33 @@ function closeAirSheet() {
   // restore focus
   try { lastActive?.focus(); } catch(e){}
 }
+function openAirImages() {
+  const newTab = window.open("", "_blank");
+
+  newTab.document.write(`
+    <html>
+    <head>
+      <title>Air Ticketing Details</title>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          background: white;
+        }
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <img src="air1.png">
+      <img src="air2.png">
+    </body>
+    </html>
+  `);
+
+  newTab.document.close();
+}
