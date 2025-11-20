@@ -139,3 +139,22 @@ button:hover { filter:brightness(0.95); }
   .services-grid { grid-template-columns: 1fr; }
   .header-inner { padding:10px 0.75rem; }
 }
+/* Hide dropdown by default */
+#dropdownMenu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background: #FFF9E6;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 9999;
+}
+
+/* Desktop: ensure dropdown NEVER shows */
+@media (min-width: 768px) {
+  #dropdownMenu {
+    display: none !important;
+  }
+}
