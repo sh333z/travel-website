@@ -1,4 +1,6 @@
-// MOBILE MENU -----------------------------
+// ---------------------------------------------
+// MOBILE MENU
+// ---------------------------------------------
 const menuBtn = document.querySelector(".menu-btn");
 const dropdown = document.getElementById("dropdownMenu");
 
@@ -10,11 +12,14 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 768) dropdown.classList.remove("open");
 });
 
-// YEAR -----------------------------------
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+// ---------------------------------------------
+// YEAR
+// ---------------------------------------------
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// POPUP FORM ------------------------------
+// ---------------------------------------------
+// POPUP FORM
+// ---------------------------------------------
 function openForm(service) {
   const popup = document.getElementById("popup-form");
   const box = document.getElementById("form-box");
@@ -41,16 +46,52 @@ function sendForm() {
   closeForm();
 }
 
-// OPEN IMAGE WINDOWS ----------------------
+// ---------------------------------------------
+// OPEN IMAGE WINDOWS
+// ---------------------------------------------
 function openPassportImage() {
   window.open("pass-srvc.png", "_blank");
 }
 
 function openAirImages() {
-  const tab = window.open("", "_blank");
-  tab.document.write(`
-      <img src="air2.png" style="width:100%">
-      <img src="air1.png" style="width:100%">
+  const newTab = window.open("about:blank", "_blank");
+
+  if (!newTab) {
+    alert("Please allow pop-ups to view the Air Ticket details.");
+    return;
+  }
+
+  newTab.document.open();
+  newTab.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Air Ticketing Details</title>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background: white;
+          display: flex;
+          flex-direction: column;
+        }
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 10px;
+          margin: 10px;
+          font-size: 16px;
+        }
+      </style>
+    </head>
+    <body>
+      <button onclick="window.close()">Close</button>
+      <img src="air2.png">
+      <img src="air1.png">
+    </body>
+    </html>
   `);
-  tab.document.close();
+  newTab.document.close();
 }
