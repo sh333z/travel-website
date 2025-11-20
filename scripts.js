@@ -52,7 +52,6 @@ function sendForm() {
 function openPassportImage() {
   window.open("pass-srvc.png", "_blank");
 }
-
 function openAirImages() {
   const newTab = window.open("about:blank", "_blank");
 
