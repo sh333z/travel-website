@@ -101,3 +101,15 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 /* responsive */
 @media(max-width:900px){.green-section{grid-template-columns:1fr}.header-logo{height:56px}}
 @media(max-width:520px){.site-logo{width:220px}}
+/* Green background for contact + office + footer */
+#contact,
+.site-footer {
+  background: #e6f7e6;   /* soft light green */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#contact .contact-grid,
+.site-footer .footer-inner {
+  background: transparent;
+}
