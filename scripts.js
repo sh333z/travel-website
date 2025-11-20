@@ -1,5 +1,6 @@
 // Basic UI interactions and form submit (AJAX)
 document.addEventListener('DOMContentLoaded', () => {
+
   // mobile menu
   const menuToggle = document.getElementById('menuToggle');
   const mobileNav = document.getElementById('mobileNav');
@@ -46,31 +47,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // quick search (client-side demo)
+  // quick search
   const quickSearch = document.getElementById('quickSearch');
   if (quickSearch) {
     quickSearch.addEventListener('submit', (e) => {
       e.preventDefault();
       const q = document.getElementById('where').value.trim();
       if (!q) { alert('Please enter a destination'); return; }
-      // In production,POST to backend or go to search results
       alert('Searching packages for: ' + q);
     });
   }
 });
+
+// dropdown menu
 document.querySelector(".menu-btn").onclick = () => {
-    const menu = document.getElementById("dropdownMenu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  const menu = document.getElementById("dropdownMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
 };
-};
+
 // popup form
 function openForm(service) {
   document.getElementById("popup-form").style.display = "flex";
   const formBox = document.getElementById("form-box");
 
-  // SHOW VISA OPTIONS ONLY WHEN USER CLICKS "Visa Assistance"
+  // SHOW VISA OPTIONS ONLY WHEN USER CLICKS "Visa Service"
   if (service === "Visa Service") {
-
     formBox.innerHTML = `
       <h2>Select Visa Type</h2>
       <button onclick="openForm('Saudi Arabia Visa')">Saudi Arabia Visa</button>
@@ -83,9 +84,8 @@ function openForm(service) {
     return;
   }
 
-  // ALL VISA TYPES → SHOW SMALL FORM
+  // ALL VISA TYPES → SMALL FORM
   if (service.includes("Visa")) {
-
     formBox.innerHTML = `
       <h2>${service}</h2>
       <input type="text" placeholder="Your Name">
@@ -98,7 +98,7 @@ function openForm(service) {
     return;
   }
 
-  // ALL OTHER SERVICES → NORMAL FORM
+  // OTHER SERVICES → NORMAL FORM
   formBox.innerHTML = `
     <h2>${service}</h2>
     <input type="text" placeholder="Your Name">
@@ -109,6 +109,8 @@ function openForm(service) {
     <button onclick="closeForm()" style="background:red;margin-top:10px;">Close</button>
   `;
 }
+
+// OPEN PASSPORT IMAGE
 function openPassportImage() {
-    window.open("pass srvc.png", "_blank"); // change passport.png to your image file
+  window.open("pass srvc.png", "_blank"); // change filename if needed
 }
