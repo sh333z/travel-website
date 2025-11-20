@@ -109,3 +109,6 @@ function openForm(service) {
     <button onclick="closeForm()" style="background:red;margin-top:10px;">Close</button>
   `;
 }
+function openPassportImage() {
+    window.open("pass srvc.png", "_blank"); // change passport.png to your image file
+}
