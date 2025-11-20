@@ -52,48 +52,7 @@ function sendForm() {
 function openPassportImage() {
   window.open("pass-srvc.png", "_blank");
 }
-function openAirImages() {
-  const newTab = window.open("about:blank", "_blank");
 
-  if (!newTab) {
-    alert("Please allow pop-ups to view the Air Ticket details.");
-    return;
-  }
-
-  newTab.document.open();
-  newTab.document.write(`
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Air Ticketing Details</title>
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-          background: white;
-          display: flex;
-          flex-direction: column;
-        }
-        img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-        button {
-          padding: 10px;
-          margin: 10px;
-          font-size: 16px;
-        }
-      </style>
-    </head>
-    <body>
-      <button onclick="window.close()">Close</button>
-      <img src="air2.png">
-      <img src="air1.png">
-    </body>
-    </html>
-  `);
-  newTab.document.close();
-}
 function openAirTab() {
   document.getElementById("airTab").style.display = "flex";
 }
