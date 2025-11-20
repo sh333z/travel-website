@@ -94,3 +94,10 @@ function openAirImages() {
   `);
   newTab.document.close();
 }
+function openAirTab() {
+  document.getElementById("airTab").style.display = "flex";
+}
+
+function closeAirTab() {
+  document.getElementById("airTab").style.display = "none";
+}
