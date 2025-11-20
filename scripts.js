@@ -112,5 +112,5 @@ function openForm(service) {
 
 // OPEN PASSPORT IMAGE
 function openPassportImage() {
-  window.open("pass srvc.png", "_blank"); // change filename if needed
+  window.open("pass-srvc.png", "_blank"); // change filename if needed
 }
