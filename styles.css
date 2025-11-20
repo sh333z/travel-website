@@ -104,7 +104,7 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 /* Green background for contact + office + footer */
 #contact,
 .site-footer {
-  background: #e6f7e6;   /* soft light green */
+  background: #c8e6c9;   /* medium leafy green */
   padding-top: 40px;
   padding-bottom: 40px;
 }
