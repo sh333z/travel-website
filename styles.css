@@ -263,7 +263,8 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 }
 
 .contact-subtitle {
-  font-size: 15px;
-  color: #444;
-  margin-bottom: 18px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 6px;
 }
