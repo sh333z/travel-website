@@ -113,39 +113,53 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section alt">
-  <div class="container contact-grid">
+<section id="contact" class="contact-section">
+  <div class="contact-wrapper">
 
-    <div>
+    <!-- LEFT SIDE FORM -->
+    <div class="contact-card">
       <h2>Contact & Booking</h2>
 
-    <form id="contactForm" class="contact-form">
-  <label>Full name</label>
-  <input id="name" required>
+      <form id="contactForm" class="new-contact-form">
+        <label>Full Name</label>
+        <input id="name" required>
 
-  <label>Email</label>
-  <input id="email" type="email" required>
+        <label>Email</label>
+        <input id="email" type="email" required>
 
-  <label>Phone</label>
-  <input id="phone">
+        <label>Phone</label>
+        <input id="phone">
 
-  <label>Service you need</label>
-  <textarea id="message" rows="4" required></textarea>
+        <label>Service You Need</label>
+        <textarea id="message" rows="4" required></textarea>
 
-  <button class="btn btn-primary">Request Quote</button>
-  <div id="formStatus"></div>
-</form>
+        <button class="btn-primary">Request Quote</button>
+        <div id="formStatus"></div>
+      </form>
     </div>
 
-    <aside class="office">
+    <!-- RIGHT SIDE INFO -->
+    <div class="contact-info-card">
       <h3>Our Office</h3>
-      <p>Seyahat Tours & Travels<br>Royal Oak Mall, Thana, Kannur</p>
-      <p>Email: seyahat@gmail.com<br>Call/WhatsApp: +91 9656550235</p>
-    </aside>
+
+      <div class="info-row">
+        <img src="loc.png" class="info-icon">
+        <p>Royal Oak Mall, Thana, Kannur</p>
+      </div>
+
+      <div class="info-row">
+        <img src="mail.png" class="info-icon">
+        <p>seyahat@gmail.com</p>
+      </div>
+
+      <div class="info-row">
+        <img src="phone.png" class="info-icon">
+        <p>+91 9656550235</p>
+      </div>
+    </div>
 
   </div>
 </section>
-
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
