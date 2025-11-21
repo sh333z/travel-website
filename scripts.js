@@ -107,9 +107,4 @@ function closeAirSheet() {
   sheet.setAttribute('aria-hidden', 'true');
   // restore focus
   try { lastActive?.focus(); } catch(e){}
-function openAirImages() {
-  window.open("air1.png", "_blank");
-  window.open("air2.png", "_blank");
-  window.open("air3.png", "_blank");
-}
 }
