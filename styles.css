@@ -205,12 +205,12 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 }
 
 .contact-card {
-  background: #000;
+  background: linear-gradient(to right, #c8f1ff, #e8faff);
   padding: 22px;
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  color: #1F2937; /* dark text */
 }
-
 .new-contact-form input,
 .new-contact-form textarea {
   width: 100%;
@@ -237,11 +237,12 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   }
 }
 .contact-info-box {
-  background: white;
+  background: linear-gradient(to right, #c8f1ff, #e8faff);
   padding: 20px;
   border-radius: 20px;
   width: 100%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  color: #1F2937; /* dark text */
 }
 
 .info-row {
