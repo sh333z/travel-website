@@ -214,43 +214,14 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
     function openPassportImage() {
   window.open("pass-srvc.png", "_blank");
 }
-  </script>
-
-  <script>
-function openAirImages() {
-  const newTab = window.open("", "_blank");
-
-  newTab.document.write(`
-    <html>
-    <head>
-      <title>Air Ticketing Details</title>
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          background: white;
-        }
-        img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      </style>
-    </head>
-    <body>
-      <img src="air2.png">
-      <img src="air1.png">
-      <img src="air3.png">
-    </body>
-    </html>
-  `);
-
-  newTab.document.close();
-}
-</script>   
 </script>
-
+<script>
+function openAirImages() {
+  window.open("air1.png", "_blank");
+  window.open("air2.png", "_blank");
+  window.open("air3.png", "_blank");
+}
+</script>
 </body>
 </html> 
 
