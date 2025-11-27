@@ -325,3 +325,22 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
     grid-template-columns: 1fr;
   }
 }
+.services-intro {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.services-intro h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.services-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.6;
+}
