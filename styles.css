@@ -460,3 +460,9 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
     font-weight: 700;   /* makes it bold */
     margin-top: 0;      /* optional – reduces spacing */
 }
+.footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
