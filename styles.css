@@ -454,7 +454,7 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .footer-main-logo {
     width: 180px;   /* Adjust size here */
     height: auto;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 .footer-col p {
     font-weight: 700;   /* makes it bold */
