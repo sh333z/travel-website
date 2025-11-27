@@ -139,7 +139,7 @@ function openAirImages() {
 
   newTab.document.close();
 }
-let umrahImages = ["umra1.png", "umrah.png"];
+let umrahImages = ["umra1.png", "umra2.png"];
 let currentUmrah = 0;
 
 function openUmrahViewer() {
