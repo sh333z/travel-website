@@ -153,3 +153,18 @@ function prevUmrah() {
 
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
 }
+function openPassportViewer() {
+    viewerImages = ["pass-srvc.png"];
+    currentViewerIndex = 0;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
+    document.getElementById("umrahViewer").style.display = "flex";
+}
+// Open Hotel Booking Viewer
+function openHotelViewer() {
+    viewerImages = ["hotel1.png", "hotel2.png"];  // add your images here
+    currentViewerIndex = 0;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
+    document.getElementById("umrahViewer").style.display = "flex";
+}
