@@ -78,14 +78,14 @@
       <img src="hotel.png" class="service-image" alt="Hotel Booking">
       <h3>Hotel Booking</h3>
       <p>Budget & luxury hotel bookings in all major cities.</p>
-      <button onclick="openForm('Hotel Booking')">View</button>
+      <button onclick="openHotelViewer()">View</button>
   </div>
 
   <div class="service-box">
       <img src="paas.png" class="service-image" alt="Passport Services">
       <h3>Passport Services</h3>
       <p>New passport, renewal, corrections & tatkal services.</p>
-      <button onclick="openPassportImage()">View</button>
+      <button onclick="openPassportViewer()">View</button>
   </div>
 
 </div>
@@ -260,11 +260,6 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
   m.style.display = (m.style.display === "block") ? "none" : "block";
 });
 </script>
-  <script>
-    function openPassportImage() {
-  window.open("pass-srvc.png", "_blank");
-}
-  </script>
 
   <footer class="footer">
 
