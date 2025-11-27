@@ -71,7 +71,7 @@
       <img src="umrah.png" class="service-image" alt="Umrah Package">
       <h3>Umrah Packages</h3>
       <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
-      <button onclick="openUmrahImage()">View</button>
+      <button onclick="openUmrahViewer()">View</button>
   </div>
 
   <div class="service-box">
@@ -340,37 +340,22 @@ function openAirImages() {
 </p>
 </footer>
 
-  <script>
-function openUmrahImages() {
-  const newTab = window.open("", "_blank");
+</script>
+  
+<!-- FULL SCREEN IMAGE VIEWER -->
+<div id="umrahViewer" class="viewer">
+  <span class="close-btn" onclick="closeUmrahViewer()">×</span>
 
-  newTab.document.write(`
-    <html>
-    <head>
-      <title>Umrah Package Details</title>
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          background: white;
-        }
-        img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      </style>
-    </head>
-    <body>
-      <img src="umra1.png">
-      <img src="umra2.png">
-    </body>
-    </html>
-  `);
+  <div class="viewer-content">
+    <img id="viewerImage" src="">
+  </div>
 
-  newTab.document.close();
-}
+  <div class="viewer-controls">
+    <span class="prev" onclick="prevUmrah()">&#10094;</span>
+    <span class="next" onclick="nextUmrah()">&#10095;</span>
+  </div>
+</div>
+  
 </script>
 </body>
 </html>
