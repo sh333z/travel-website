@@ -110,8 +110,8 @@ function closeAirSheet() {
 }
 // --- IMAGE VIEWER (shared for Umrah and Air Ticketing) ---
 
-let viewerImages = [];      // will store images depending on viewer
-let currentViewerIndex = 0; // current image index
+let viewerImages = [];      
+let currentViewerIndex = 0; 
 
 // Open Umrah Viewer
 function openUmrahViewer() {
@@ -131,12 +131,12 @@ function openAirViewer() {
     document.getElementById("umrahViewer").style.display = "flex";
 }
 
-// Close Viewer
+// Close viewer (same for both)
 function closeUmrahViewer() {
     document.getElementById("umrahViewer").style.display = "none";
 }
 
-// Next Image
+// Next image
 function nextUmrah() {
     currentViewerIndex++;
     if (currentViewerIndex >= viewerImages.length)
@@ -145,7 +145,7 @@ function nextUmrah() {
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
 }
 
-// Previous Image
+// Previous image
 function prevUmrah() {
     currentViewerIndex--;
     if (currentViewerIndex < 0)
