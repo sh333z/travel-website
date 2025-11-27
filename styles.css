@@ -451,3 +451,8 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   font-size: 14px;
   color: #777;
 }
+.footer-main-logo {
+    width: 180px;   /* Adjust size here */
+    height: auto;
+    margin-bottom: 15px;
+}
