@@ -139,3 +139,27 @@ function openAirImages() {
 
   newTab.document.close();
 }
+let umrahImages = ["umra1.png", "umrah.png"];
+let currentUmrah = 0;
+
+function openUmrahViewer() {
+    currentUmrah = 0;
+    document.getElementById("viewerImage").src = umrahImages[currentUmrah];
+    document.getElementById("umrahViewer").style.display = "flex";
+}
+
+function closeUmrahViewer() {
+    document.getElementById("umrahViewer").style.display = "none";
+}
+
+function nextUmrah() {
+    currentUmrah++;
+    if (currentUmrah >= umrahImages.length) currentUmrah = 0;
+    document.getElementById("viewerImage").src = umrahImages[currentUmrah];
+}
+
+function prevUmrah() {
+    currentUmrah--;
+    if (currentUmrah < 0) currentUmrah = umrahImages.length - 1;
+    document.getElementById("viewerImage").src = umrahImages[currentUmrah];
+}
