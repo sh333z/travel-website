@@ -108,58 +108,48 @@ function closeAirSheet() {
   // restore focus
   try { lastActive?.focus(); } catch(e){}
 }
-function openAirImages() {
-  const newTab = window.open("", "_blank");
+// --- IMAGE VIEWER (shared for Umrah and Air Ticketing) ---
 
-  newTab.document.write(`
-    <html>
-    <head>
-      <title>Air Ticketing Details</title>
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          background: white;
-        }
-        img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-      </style>
-    </head>
-    <body>
-      <img src="air1.png">
-      <img src="air2.png">
-      <img src="air3.png">
-    </body>
-    </html>
-  `);
+let viewerImages = [];      // will store images depending on viewer
+let currentViewerIndex = 0; // current image index
 
-  newTab.document.close();
-}
-let umrahImages = ["umra1.png", "umra2.png"];
-let currentUmrah = 0;
-
+// Open Umrah Viewer
 function openUmrahViewer() {
-    currentUmrah = 0;
-    document.getElementById("viewerImage").src = umrahImages[currentUmrah];
+    viewerImages = ["umra1.png", "umra2.png"];
+    currentViewerIndex = 0;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
     document.getElementById("umrahViewer").style.display = "flex";
 }
 
+// Open Air Ticket Viewer
+function openAirViewer() {
+    viewerImages = ["air1.png", "air2.png", "air3.png"];
+    currentViewerIndex = 0;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
+    document.getElementById("umrahViewer").style.display = "flex";
+}
+
+// Close Viewer
 function closeUmrahViewer() {
     document.getElementById("umrahViewer").style.display = "none";
 }
 
+// Next Image
 function nextUmrah() {
-    currentUmrah++;
-    if (currentUmrah >= umrahImages.length) currentUmrah = 0;
-    document.getElementById("viewerImage").src = umrahImages[currentUmrah];
+    currentViewerIndex++;
+    if (currentViewerIndex >= viewerImages.length)
+        currentViewerIndex = 0;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
 }
 
+// Previous Image
 function prevUmrah() {
-    currentUmrah--;
-    if (currentUmrah < 0) currentUmrah = umrahImages.length - 1;
-    document.getElementById("viewerImage").src = umrahImages[currentUmrah];
+    currentViewerIndex--;
+    if (currentViewerIndex < 0)
+        currentViewerIndex = viewerImages.length - 1;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
 }
