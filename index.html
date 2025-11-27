@@ -71,7 +71,7 @@
       <img src="umrah.png" class="service-image" alt="Umrah Package">
       <h3>Umrah Packages</h3>
       <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
-      <button onclick="openForm('Umrah Package')">View</button>
+      <button onclick="openUmrahImage()">View</button>
   </div>
 
   <div class="service-box">
@@ -339,5 +339,38 @@ function openAirImages() {
   ©️ <span id="year"></span> Seyahath Holidays. All rights reserved.
 </p>
 </footer>
+
+  <script>
+function openUmrahImages() {
+  const newTab = window.open("", "_blank");
+
+  newTab.document.write(`
+    <html>
+    <head>
+      <title>Umrah Package Details</title>
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          background: white;
+        }
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      </style>
+    </head>
+    <body>
+      <img src="umrah1.png">
+      <img src="umrah2.png">
+    </body>
+    </html>
+  `);
+
+  newTab.document.close();
+}
+</script>
 </body>
 </html>
