@@ -168,3 +168,11 @@ function openHotelViewer() {
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
     document.getElementById("umrahViewer").style.display = "flex";
 }
+// Open Holidays Viewer
+function openHolidayViewer() {
+    viewerImages = ["hldy1.png", "hldy2.png"];  // your holiday images
+    currentViewerIndex = 0;
+
+    document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
+    document.getElementById("umrahViewer").style.display = "flex";
+}
