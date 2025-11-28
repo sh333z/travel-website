@@ -124,7 +124,7 @@ function openUmrahViewer() {
 
 // Open Air Ticket Viewer
 function openAirViewer() {
-    viewerImages = ["air1.png", "air2.png", "air3.png"];
+    viewerImages = ["air11.png", "air22.png", "air33.png"];
     currentViewerIndex = 0;
 
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
