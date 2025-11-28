@@ -162,7 +162,7 @@ function openPassportViewer() {
 }
 // Open Hotel Booking Viewer
 function openHotelViewer() {
-    viewerImages = ["hotel1.png", "hotel2.png"];  // add your images here
+    viewerImages = ["hotel1.png", "hotel22.png"];  // add your images here
     currentViewerIndex = 0;
 
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
