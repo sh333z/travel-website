@@ -115,7 +115,7 @@ let currentViewerIndex = 0;
 
 // Open Umrah Viewer
 function openUmrahViewer() {
-    viewerImages = ["umra1.png", "umra2.png"];
+    viewerImages = ["umra11.png", "umra22.png"];
     currentViewerIndex = 0;
 
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
