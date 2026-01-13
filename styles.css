@@ -690,3 +690,9 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .zigzag img:nth-child(4) {
   transform: translateY(32px);
 }
+@media (max-width: 380px) {
+  .zigzag img {
+    width: 88px;
+    height: 140px;
+  }
+}
