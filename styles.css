@@ -661,31 +661,31 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   }
 }
 
+.hero-images {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.zigzag {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
 .zigzag img {
-  width: 75px;
-  height: 120px;
+  width: 110px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 20px;
   background: #fff;
 }
+
 .img-up {
-  transform: translateY(-16px);
+  transform: translateY(-30px);
 }
 
 .img-down {
-  transform: translateY(16px);
+  transform: translateY(30px);
 }
-@media (min-width: 768px) {
-  .zigzag img {
-    width: 120px;
-    height: 180px;
-  }
-
-  .img-up {
-    transform: translateY(-24px);
-  }
-
-  .img-down {
-    transform: translateY(24px);
-  }
-  
