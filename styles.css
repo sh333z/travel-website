@@ -669,14 +669,15 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .zigzag {
   display: flex;
   justify-content: center;
-  gap: 14px;                 /* closer images */
-  padding: 0 16px;          /* prevents side overflow */
-  overflow: hidden;         /* safety */
+  gap: 3px;                 /* closer images */
+  overflow: visible;
+  position: relative;
+  z-index: 2;
 }
 
 .zigzag img {
-  width: 95px;              /* smaller */
-  height: 150px;            /* proportional */
+  width: 90px;              /* smaller */
+  height: 160px;            /* proportional */
   object-fit: cover;
   border-radius: 20px;
   background: #fff;
