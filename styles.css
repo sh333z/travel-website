@@ -603,101 +603,96 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   color: var(--muted);
   line-height: 1.6;
 }
-
-/* Container for the 3 columns */
-.magazine-layout {
-    display: flex;
-    height: 100vh; /* Takes full screen height */
-    width: 100%;
-    overflow: hidden;
+/* =========================
+   WHY CHOOSE SECTION
+========================= */
+.why-choose {
+  background: linear-gradient(180deg, #1fa3e6, #1c8fd1);
+  color: #fff;
+  padding: 120px 50px 20px;
+  text-align: center;
 }
 
-.panel {
-    flex: 1; /* Each column takes equal width */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    position: relative;
+.why-choose h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: 700;
 }
 
-/* LEFT HERO STYLING */
-.hero-panel {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("beach.png") center/cover;
-    color: white;
+.why-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
 }
 
-.rotated-title-wrap {
-    transform: rotate(-90deg); /* Rotates the text like your design */
-    white-space: nowrap;
+.why-item span {
+  font-size: 36px;
+  margin-bottom: 8px;
 }
 
-.rotated-title-wrap h1 {
-    font-size: 3.5rem;
-    margin: 10px 0;
+.why-item p {
+  font-size: 16px;
+  font-weight: 500;
+}
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box {
+    padding: 18px;
+  }
+
+  .about-gallery img {
+    height: 140px;
+  }
+
+  .testi-card {
+    text-align: center;
+  }
+
+  .testi-img {
+    position: static;
+    margin-top: 12px;
+  }
 }
 
-/* BLUE SECTION STYLING */
-.why-panel {
-    background-color: #00AEEF; /* Match the design blue */
-    color: white;
-    justify-content: flex-start;
-    padding-top: 60px;
+.hero-images {
+  position: relative;
+  z-index: 10;
 }
 
-/* Staggered Image Effect */
-.image-stagger-grid {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 40px;
+.zigzag {
+  display: flex;
+  justify-content: center;
+  gap: 14px;                 /* closer images */
+  padding: 0 16px;          /* prevents side overflow */
+  overflow: hidden;         /* safety */
 }
 
-.image-stagger-grid img {
-    width: 85px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 15px;
-    border: 3px solid #fff;
+.zigzag img {
+  width: 95px;              /* smaller */
+  height: 150px;            /* proportional */
+  object-fit: cover;
+  border-radius: 20px;
+  background: #fff;
+}
+.zigzag img:nth-child(1),
+.zigzag img:nth-child(3) {
+  transform: translateY(0);
 }
 
-.img-high { transform: translateY(-25px); }
-.img-low { transform: translateY(25px); }
-
-.feature-rows {
-    text-align: left;
-    width: 100%;
-    max-width: 260px;
+.zigzag img:nth-child(2),
+.zigzag img:nth-child(4) {
+  transform: translateY(32px);
 }
-
-.f-row {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-/* Side vertical text on the far right */
-.vertical-footer-text {
-    position: absolute;
-    right: 10px;
-    bottom: 50%;
-    transform: rotate(-90deg) translateX(50%);
-    font-weight: bold;
-    opacity: 0.8;
-}
-
-/* Responsiveness for small phones */
-@media (max-width: 850px) {
-    .magazine-layout {
-        flex-direction: column;
-        height: auto;
-    }
-    .panel {
-        height: 100vh;
-        width: 100%;
-    }
-    .rotated-title-wrap { transform: rotate(0); }
+@media (max-width: 380px) {
+  .zigzag img {
+    width: 88px;
+    height: 140px;
+  }
 }
