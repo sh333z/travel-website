@@ -660,16 +660,32 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
     margin-top: 12px;
   }
 }
-.image-row {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  padding: 20px;
-}
 
-.image-row img {
-  width: 70px;
-  height: 110px;
+.zigzag img {
+  width: 75px;
+  height: 120px;
   object-fit: cover;
   border-radius: 18px;
+  background: #fff;
 }
+.img-up {
+  transform: translateY(-16px);
+}
+
+.img-down {
+  transform: translateY(16px);
+}
+@media (min-width: 768px) {
+  .zigzag img {
+    width: 120px;
+    height: 180px;
+  }
+
+  .img-up {
+    transform: translateY(-24px);
+  }
+
+  .img-down {
+    transform: translateY(24px);
+  }
+  
