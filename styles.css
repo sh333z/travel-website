@@ -540,3 +540,103 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
         right: 20px;
     }
 }
+/* =========================
+   HERO SECTION (MOBILE FIRST)
+========================= */
+.hero {
+  height: 70vh;
+  background: url("beach.png") center/cover no-repeat;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.55)
+  );
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 28px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero-overlay p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+/* =========================
+   WHY CHOOSE SECTION
+========================= */
+.why-choose {
+  background: linear-gradient(180deg, #1fa3e6, #1c8fd1);
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.why-choose h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.why-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.why-item span {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  font-size: 16px;
+  font-weight: 500;
+}
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+@media (max-width: 768px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box {
+    padding: 18px;
+  }
+
+  .about-gallery img {
+    height: 140px;
+  }
+
+  .testi-card {
+    text-align: center;
+  }
+
+  .testi-img {
+    position: static;
+    margin-top: 12px;
+  }
+}
