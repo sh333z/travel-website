@@ -663,50 +663,43 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 
 .hero-images {
   position: relative;
-  z-index: 10;
+  margin-bottom: -60px; /* pulls images into blue */
+  z-index: 2;
 }
 
 .zigzag {
   display: flex;
   justify-content: center;
-  gap: 3px;                 /* closer images */
+  gap: 0px;
   overflow: visible;
-  position: relative;
-  z-index: 2;
 }
 
 .zigzag img {
-  width: 90px;              /* smaller */
-  height: 160px;            /* proportional */
+  width: 120px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 22px;
+  border: 4px solid #ffffff; /* white stroke */
   background: #fff;
+  box-sizing: border-box;
 }
+
+/* 1st & 3rd → touch blue line */
 .zigzag img:nth-child(1),
 .zigzag img:nth-child(3) {
   transform: translateY(0);
 }
 
+/* 2nd & 4th → inside blue */
 .zigzag img:nth-child(2),
 .zigzag img:nth-child(4) {
-  transform: translateY(32px);
+  transform: translateY(30px);
 }
+
+/* Mobile adjustment */
 @media (max-width: 380px) {
   .zigzag img {
-    width: 88px;
-    height: 140px;
+    width: 100px;
+    height: 160px;
   }
-}
-
-.zigzag-img {
-  width: 130px;                 /* slightly smaller */
-  height: 180px;
-  object-fit: cover;
-  border-radius: 20px;
-
-  border: 4px solid #ffffff;    /* white stroke */
-  box-sizing: border-box;       /* IMPORTANT: prevents cutting */
-}
-.zigzag-img.down {
-  margin-top: 25px;   /* inside blue but still fully visible */
 }
