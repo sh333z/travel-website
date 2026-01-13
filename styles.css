@@ -668,8 +668,8 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 }
 
 .gallery-item img {
-  width: 101px;
-  height: 139px;
+  width: 80px;
+  height: 120px;
   object-fit: cover;
   border-radius: 20px;
 }
