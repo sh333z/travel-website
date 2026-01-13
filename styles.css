@@ -669,26 +669,24 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .zigzag {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 14px;                 /* closer images */
+  padding: 0 16px;          /* prevents side overflow */
+  overflow: hidden;         /* safety */
 }
 
-/* common image style */
 .zigzag img {
-  width: 115px;
-  height: 175px;
+  width: 95px;              /* smaller */
+  height: 150px;            /* proportional */
   object-fit: cover;
-  border-radius: 22px;
+  border-radius: 20px;
   background: #fff;
 }
-
-/* 1st & 3rd images – SAME LINE as blue */
 .zigzag img:nth-child(1),
 .zigzag img:nth-child(3) {
   transform: translateY(0);
 }
 
-/* 2nd & 4th images – INSIDE blue */
 .zigzag img:nth-child(2),
 .zigzag img:nth-child(4) {
-  transform: translateY(35px);
+  transform: translateY(32px);
 }
