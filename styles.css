@@ -544,7 +544,7 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
    HERO SECTION (MOBILE FIRST)
 ========================= */
 .hero {
-  height: 70vh;
+  height: 40vh;
   background: url("beach.png") center/cover no-repeat;
   position: relative;
 }
