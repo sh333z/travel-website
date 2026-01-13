@@ -661,38 +661,34 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   }
 }
 
-/* IMAGE BRIDGE SECTION */
-.image-bridge {
+.hero-images {
   position: relative;
-  margin-bottom: -80px; /* pulls images into blue */
-  z-index: 2;
+  z-index: 10;
 }
 
-.bridge-images {
+.zigzag {
   display: flex;
   justify-content: center;
-  gap: 18px;
-  padding: 0 16px;
+  gap: 20px;
 }
 
-.bridge-img {
-  width: 90px;
-  height: 140px;
+/* common image style */
+.zigzag img {
+  width: 115px;
+  height: 175px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 22px;
   background: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* first two images lifted */
-.bridge-img.lift {
-  transform: translateY(-50px);
+/* 1st & 3rd images – SAME LINE as blue */
+.zigzag img:nth-child(1),
+.zigzag img:nth-child(3) {
+  transform: translateY(0);
 }
 
-/* MOBILE ADJUST */
-@media (max-width: 480px) {
-  .bridge-img {
-    width: 80px;
-    height: 125px;
-  }
+/* 2nd & 4th images – INSIDE blue */
+.zigzag img:nth-child(2),
+.zigzag img:nth-child(4) {
+  transform: translateY(35px);
 }
