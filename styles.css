@@ -609,7 +609,7 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .why-choose {
   background: linear-gradient(180deg, #1fa3e6, #1c8fd1);
   color: #fff;
-  padding: 50px 20px;
+  padding: 120px 50px 20px;
   text-align: center;
 }
 
@@ -661,31 +661,38 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   }
 }
 
-.hero-images {
-  padding-top: 60px;
-  padding-bottom: 80px;
+/* IMAGE BRIDGE SECTION */
+.image-bridge {
+  position: relative;
+  margin-bottom: -80px; /* pulls images into blue */
+  z-index: 2;
+}
+
+.bridge-images {
   display: flex;
   justify-content: center;
+  gap: 18px;
+  padding: 0 16px;
 }
 
-.zigzag {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-}
-
-.zigzag img {
-  width: 110px;
-  height: 170px;
+.bridge-img {
+  width: 90px;
+  height: 140px;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 18px;
   background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.img-up {
-  transform: translateY(-30px);
+/* first two images lifted */
+.bridge-img.lift {
+  transform: translateY(-50px);
 }
 
-.img-down {
-  transform: translateY(30px);
+/* MOBILE ADJUST */
+@media (max-width: 480px) {
+  .bridge-img {
+    width: 80px;
+    height: 125px;
+  }
 }
