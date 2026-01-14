@@ -519,7 +519,6 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
     transform: translateY(-50%);
 }
 
-
 /* MOBILE FIX — make image fit perfectly on small screens */
 @media (max-width: 600px) {
     .viewer-content img {
