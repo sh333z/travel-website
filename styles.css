@@ -745,6 +745,8 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   }
 }
 .why-choose {
+  background: #0f172a;
+  color: #ffffff;
   text-align: center;
   padding: 60px 20px;
 }
@@ -755,11 +757,19 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 
 .why-item i {
   font-size: 40px;
-  color: #ffffff;   /* change to your brand color */
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .why-item p {
   font-size: 16px;
   font-weight: 500;
+  color: #ffffff;
+}
+.why-item i {
+  transition: transform 0.3s ease;
+}
+
+.why-item:hover i {
+  transform: scale(1.15);
 }
