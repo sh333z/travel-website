@@ -773,3 +773,116 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
 .why-item:hover i {
   transform: scale(1.15);
 }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service-box {
+  background: #f4f4f4;
+  border-radius: 18px;
+  padding-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.15);
+}
+
+/* IMAGE AREA */
+.service-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  position: relative;
+}
+
+/* ICON CIRCLE EFFECT */
+.service-box img {
+  position: relative;
+}
+
+.service-box::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  background: #e63946; /* brand red */
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 155px;
+  z-index: 2;
+}
+
+/* ICON IMAGE ON CIRCLE */
+.service-box::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 168px;
+  z-index: 3;
+}
+
+/* TEXT */
+.service-box h3 {
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-box p {
+  font-size: 14px;
+  padding: 0 15px;
+  color: #555;
+}
+
+/* BUTTON */
+.service-box button,
+.service-box a {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #1d3557;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+.service-box:nth-child(1)::after {
+  background-image: url("hldy.png");
+}
+
+.service-box:nth-child(2)::after {
+  background-image: url("visaa.png");
+}
+
+.service-box:nth-child(3)::after {
+  background-image: url("air.png");
+}
+
+.service-box:nth-child(4)::after {
+  background-image: url("umra.png");
+}
+
+.service-box:nth-child(5)::after {
+  background-image: url("hotel.png");
+}
+
+.service-box:nth-child(6)::after {
+  background-image: url("paas.png");
+}
