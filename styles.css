@@ -702,3 +702,11 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
     height: 160px;
   }
 }
+.welcome-text {
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
