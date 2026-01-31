@@ -744,3 +744,22 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
     transform: translateY(0);
   }
 }
+.why-choose {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-item {
+  margin: 20px 0;
+}
+
+.why-item i {
+  font-size: 40px;
+  color: #2a7fff;   /* change to your brand color */
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 16px;
+  font-weight: 500;
+}
