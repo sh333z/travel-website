@@ -181,4 +181,25 @@ function slide(direction) {
   const slider = document.getElementById("serviceSlider");
   slider.scrollLeft += direction * 280;
 }
+// AUTO SLIDE SERVICES
+let autoSlideInterval;
 
+function startAutoSlide() {
+  const slider = document.getElementById("serviceSlider");
+  if (!slider) return;
+
+  autoSlideInterval = setInterval(() => {
+    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+    if (slider.scrollLeft >= maxScrollLeft) {
+      slider.scrollLeft = 0; // go back to start
+    } else {
+      slider.scrollLeft += 280; // card width
+    }
+  }, 3000); // every 3 seconds
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+window.addEventListener("load", startAutoSlide);
