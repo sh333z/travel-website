@@ -177,10 +177,7 @@ function openHolidayViewer() {
     document.getElementById("umrahViewer").style.display = "flex";
 }
 
-function slide(direction) {
-  const slider = document.getElementById("serviceSlider");
-  slider.scrollLeft += direction * 280;
-}
+
 // AUTO SLIDE SERVICES
 let autoSlideInterval;
 
