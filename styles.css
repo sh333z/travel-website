@@ -865,3 +865,7 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   scroll-snap-align: start;
   flex: 0 0 auto;
 }
+.slider::after {
+  content: "";
+  flex: 0 0 20px;
+}
