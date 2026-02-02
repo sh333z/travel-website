@@ -176,3 +176,9 @@ function openHolidayViewer() {
     document.getElementById("viewerImage").src = viewerImages[currentViewerIndex];
     document.getElementById("umrahViewer").style.display = "flex";
 }
+<script>
+function slide(direction) {
+  const slider = document.getElementById("serviceSlider");
+  slider.scrollLeft += direction * 280;
+}
+</script>
