@@ -184,22 +184,37 @@ function slide(direction) {
 // AUTO SLIDE SERVICES
 let autoSlideInterval;
 
+function getSlideWidth() {
+  const slider = document.getElementById("serviceSlider");
+  const card = slider.querySelector(".slide-card");
+  const style = window.getComputedStyle(card);
+  const gap = parseInt(style.marginRight) || 0;
+  return card.offsetWidth + gap;
+}
+
+function slide(direction) {
+  const slider = document.getElementById("serviceSlider");
+  slider.scrollBy({
+    left: direction * getSlideWidth(),
+    behavior: "smooth"
+  });
+}
+
 function startAutoSlide() {
   const slider = document.getElementById("serviceSlider");
-  if (!slider) return;
-
   autoSlideInterval = setInterval(() => {
-    const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
 
-    if (slider.scrollLeft >= maxScrollLeft) {
-      slider.scrollLeft = 0; // go back to start
+    if (slider.scrollLeft + getSlideWidth() >= maxScroll) {
+      slider.scrollTo({ left: 0, behavior: "smooth" });
     } else {
-      slider.scrollLeft += 280; // card width
+      slide(1);
     }
-  }, 3000); // every 3 seconds
+  }, 3000);
 }
 
 function stopAutoSlide() {
   clearInterval(autoSlideInterval);
 }
+
 window.addEventListener("load", startAutoSlide);
