@@ -90,52 +90,60 @@
   </div>
 </section>
 <!-- YOUR SERVICES -->
-<div class="services">
+<section class="services-slider">
+  <h2 class="services-title">Our Services</h2>
 
-  <div class="service-box">
-      <img src="hldy.png" class="service-image" alt="Holidays">
-      <h3>Holidays</h3>
-      <p>Customized holiday packages for families, couples, groups & solo travelers.</p>
-      <button onclick="openHolidayViewer()">View</button>
+  <div class="slider-wrapper">
+    <button class="nav prev" onclick="slide(-1)">❮</button>
+
+    <div class="slider" id="serviceSlider">
+      <!-- Flight Tickets -->
+      <div class="slide-card">
+        <img src="air.png" alt="Flight Tickets">
+        <h3>Flight Tickets</h3>
+        <p>Affordable domestic & international flight bookings.</p>
+      </div>
+
+      <!-- Visa -->
+      <div class="slide-card">
+        <img src="visaa.png" alt="Visa Assistance">
+        <h3>Visa Assistance</h3>
+        <p>Fast & easy visa processing with expert guidance.</p>
+      </div>
+
+      <!-- Holidays -->
+      <div class="slide-card">
+        <img src="hldy.png" alt="Holidays">
+        <h3>Holidays</h3>
+        <p>Customized holiday packages for all travelers.</p>
+      </div>
+
+      <!-- Umrah -->
+      <div class="slide-card">
+        <img src="umra.png" alt="Umrah Packages">
+        <h3>Umrah Packages</h3>
+        <p>Comfortable & affordable Umrah packages.</p>
+      </div>
+
+      <!-- Passport -->
+      <div class="slide-card">
+        <img src="paas.png" alt="Passport Services">
+        <h3>Passport Services</h3>
+        <p>New passport, renewal & tatkal services.</p>
+      </div>
+
+      <!-- Hotel -->
+      <div class="slide-card">
+        <img src="hotel.png" alt="Hotel Booking">
+        <h3>Hotel Booking</h3>
+        <p>Budget & luxury hotels worldwide.</p>
+      </div>
+    </div>
+
+    <button class="nav next" onclick="slide(1)">❯</button>
   </div>
-
-  <div class="service-box">
-      <img src="visaa.png" class="service-image" alt="Visa Assistance">
-      <h3>Visa Assistance</h3>
-      <p>Fast & easy visa processing</p>
-      <a href="visa.html">View</a>
-  </div>
-
-  <div class="service-box">
-      <img src="air.png" class="service-image" alt="Air Ticketing">
-      <h3>Air Ticketing</h3>
-      <p>Affordable domestic & international flight tickets.</p>
-      <button onclick="openAirViewer()">View</button>
-  </div>
-
-  <div class="service-box">
-      <img src="umra.png" class="service-image" alt="Umrah Package">
-      <h3>Umrah Packages</h3>
-      <p>Comfortable & affordable Umrah packages with hotel & transport.</p>
-      <button onclick="openUmrahViewer()">View</button>
-  </div>
-
-  <div class="service-box">
-      <img src="hotel.png" class="service-image" alt="Hotel Booking">
-      <h3>Hotel Booking</h3>
-      <p>Budget & luxury hotel bookings in all major cities.</p>
-      <button onclick="openHotelViewer()">View</button>
-  </div>
-
-  <div class="service-box">
-      <img src="paas.png" class="service-image" alt="Passport Services">
-      <h3>Passport Services</h3>
-      <p>New passport, renewal, corrections & tatkal services.</p>
-      <button onclick="openPassportViewer()">View</button>
-  </div>
-
-</div>
-
+</section>
+  
 <!-- WHO WE ARE SECTION -->
 <section id="about" class="about-section">
   <div class="about-wrapper">
