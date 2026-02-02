@@ -199,13 +199,15 @@ function slide(direction) {
 
 function startAutoSlide() {
   const slider = document.getElementById("serviceSlider");
+
   autoSlideInterval = setInterval(() => {
+    const slideWidth = getSlideWidth();
     const maxScroll = slider.scrollWidth - slider.clientWidth;
 
-    if (slider.scrollLeft + getSlideWidth() >= maxScroll) {
+    if (slider.scrollLeft + slideWidth > maxScroll) {
       slider.scrollTo({ left: 0, behavior: "smooth" });
     } else {
-      slide(1);
+      slider.scrollBy({ left: slideWidth, behavior: "smooth" });
     }
   }, 3000);
 }
