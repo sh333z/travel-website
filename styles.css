@@ -869,3 +869,57 @@ html,body{height:100%;margin:0;font-family:"Inter",sans-serif;color:var(--text);
   content: "";
   flex: 0 0 20px;
 }
+/* SERVICES SLIDER FIX */
+.services-slider {
+  padding: 40px 0;
+}
+
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* SERVICE CARD SIZE */
+.slide-card {
+  flex: 0 0 85%;
+  max-width: 85%;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* IMAGE */
+.slide-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.slide-card h3 {
+  margin: 15px 15px 8px;
+  font-size: 18px;
+}
+.slide-card p {
+  margin: 0 15px 20px;
+  font-size: 14px;
+  color: #555;
+}
+@media (min-width: 768px) {
+  .slide-card {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+}
